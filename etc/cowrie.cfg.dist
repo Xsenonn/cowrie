@@ -708,10 +708,10 @@ listen_endpoints = tcp:2223:interface=0.0.0.0
 
 # JSON based logging module
 #
-[output_jsonlog]
-enabled = true
-logfile = ${honeypot:log_path}/cowrie.json
-epoch_timestamp = false
+#[output_jsonlog]
+#enabled = true
+#logfile = ${honeypot:log_path}/cowrie.json
+#epoch_timestamp = false
 
 # Supports logging to Elasticsearch
 # This is a simple early release
@@ -816,13 +816,13 @@ epoch_timestamp = false
 # mandatory fields: url, token
 # optional fields: index, source, sourcetype, host
 #
-#[output_splunk]
-#enabled = false
-#url = https://localhost:8088/services/collector/event
-#token = 6A0EA6C6-8006-4E39-FC44-C35FF6E561A8
-#index = cowrie
-#sourcetype = cowrie
-#source = cowrie
+[output_splunk]
+enabled = true
+url = https://10.31.3.15:8088/services/collector/event
+token = 65ba1b48-bdda-4c21-b7c4-bebb94d4c837
+index = cowrie
+sourcetype = cowrie
+source = cowrie
 
 
 # HPFeeds
@@ -919,11 +919,11 @@ epoch_timestamp = false
 #database_name = cowrie
 #retention_policy_duration = 12w
 
-[output_kafka]
-enabled = false
-host = 127.0.0.1
-port = 9092
-topic = cowrie
+#[output_kafka]
+#enabled = false
+#host = 127.0.0.1
+#port = 9092
+#topic = cowrie
 
 
 #[output_redis]
