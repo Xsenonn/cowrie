@@ -817,7 +817,7 @@ listen_endpoints = tcp:2223:interface=0.0.0.0
 # optional fields: index, source, sourcetype, host
 #
 [output_splunk]
-enabled = true
+enabled = True
 url = https://10.31.3.15:8088/services/collector/event
 token = 65ba1b48-bdda-4c21-b7c4-bebb94d4c837
 index = cowrie
